@@ -1,0 +1,157 @@
+/*
+@font-face {
+    font-family: lobster;
+    src: url('res/Lobster-Regular.ttf') format('ttf');
+}
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/*
+div.countdown-container{
+    
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    font-family: lobster;
+
+}
+*/
+
+.mySlides {
+    display:none;
+    /* Questo da riaggiungere in seguito
+    max-width: 100%;
+    max-height: 100%;
+    */
+    transform: scale(1.3);
+    
+    object-fit: cover;
+    width: auto;
+    height: 1100px;
+    
+    opacity: 45%;
+    
+}
+
+div.slider-container {
+    z-index: -1;
+    position: absolute;
+    /*
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    */
+}
+
+canvas{
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+}
+
+section>p{
+    font-size: 10vw;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    text-shadow: 0px 0px 20px #000000;
+}
+
+section>p.testo-intro{
+    margin-top: -200px;
+    font-size: 2vw;
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    text-shadow: 0px 0px 20px #000000;
+}
+
+section>p.testo-inpensione{
+    margin-top: 0;
+    margin-bottom: -100px;
+    font-size: 2vw;
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    text-shadow: 0px 0px 20px #000000;
+}
+
+/*
+p.countdown {
+    font-family: lobster;
+    text-align: center;
+}
+
+*/
+
+@media (max-width: 767px){
+    section>p{
+        font-size: 10vw;
+        font-family: 'Lobster', cursive;
+        text-align: center;
+        text-shadow: 0px 0px 20px #000000;
+    }
+
+    section>p.testo-intro{
+        margin-top: 0;
+        font-size: 4vw;
+        font-family: 'Amatic SC', cursive;
+        text-align: center;
+        text-shadow: 0px 0px 20px #000000;
+    }
+
+    section>p.testo-inpensione{
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 4vw;
+        font-family: 'Amatic SC', cursive;
+        text-align: center;
+        text-shadow: 0px 0px 20px #000000;
+    }
+}
+
+@media (max-width: 1700px){
+    section>p{
+        font-size: 10vw;
+        font-family: 'Lobster', cursive;
+        text-align: center;
+        text-shadow: 0px 0px 20px #000000;
+    }
+
+    section>p.testo-intro{
+        margin-top: 0;
+        font-size: 4vw;
+        font-family: 'Amatic SC', cursive;
+        text-align: center;
+        text-shadow: 0px 0px 20px #000000;
+    }
+
+    section>p.testo-inpensione{
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 4vw;
+        font-family: 'Amatic SC', cursive;
+        text-align: center;
+        text-shadow: 0px 0px 20px #000000;
+    }
+}

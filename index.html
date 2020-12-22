@@ -1,0 +1,72 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="res/style.css">
+        <script src="main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Playfair+Display:wght@500&display=swap');
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+
+    <body>
+
+        <canvas></canvas>
+
+
+        <div id="slider-container" class="slider-container" style="width: 100%">
+            <img class="mySlides" src="res/1.jpeg" style="width: 100%;">
+            <img class="mySlides" src="res/2.jpeg" style="width: 100%;">
+            <img class="mySlides" src="res/3.jpeg" style="width: 100%;">
+            <img class="mySlides" src="res/4.jpeg" style="width: 100%;">
+            <img class="mySlides" src="res/5.jpeg" style="width: 100%;">
+        </div>
+
+        <section>
+            <p class="testo-inpensione">
+                In pensione tra...
+            </p>
+            <p class="countdown" id="demo"></p>
+            <p class="testo-intro">
+                Viviamo di attese,<br>
+                e noi oggi siamo qui<br>
+                insieme a te<br>
+                aspettando di coronare un sogno,<br>
+                un grande traguardo,<br>
+                la chiusura di un cerchio,<br>
+                di tanti successi, di momenti duri, di emozioni forti…<br>
+                Vogliamo viverle insieme a te!<br>
+                AUGURI BABBO <3
+            </p>
+        </section>
+
+        
+
+
+    </body>
+
+
+    <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+            //$(x[i]).fadeOut();
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        //x[myIndex-1].style.display = "block";  
+        $(x[myIndex-1]).fadeIn();
+        setTimeout(carousel, 4000); // Change image every 2 seconds
+    }
+    </script>
+
+</html>
